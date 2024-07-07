@@ -2,7 +2,7 @@
 langchain 
 langchain-community
 langchain-text-splitters
-langchain-chroma=0.3.29
+langchain-chroma==0.3.29
 langchain-cohere
 langchain-google-genai
 bs4
