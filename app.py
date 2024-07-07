@@ -129,6 +129,19 @@ url = st.text_input("Enter the URL of the knowledge base or FAQ page", key='url_
 if 'conversation' not in st.session_state:
     st.session_state.conversation = []
 
+# Function to handle new URL inputs
+def handle_new_url(url):
+    st.session_state.all_splits = load_and_process_document(url)
+    st.session_state.retriever, st.session_state.llm, st.session_state.prompt = initialize_retriever_and_llm(st.session_state.all_splits)
+    st.session_state.conversation = []
+
+if url and 'url' in st.session_state and st.session_state.url != url:
+    handle_new_url(url)
+elif url and 'url' not in st.session_state:
+    handle_new_url(url)
+
+st.session_state.url = url
+
 if url:
     st.write("Loading and processing the document...")
     all_splits = load_and_process_document(url)
