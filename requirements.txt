@@ -1,7 +1,9 @@
+langchain 
 langchain-community
 langchain-text-splitters
 langchain-chroma
 langchain-cohere
 langchain-google-genai
-langchain
-beautifulsoup4
+bs4
+langchainhub
+
