@@ -13,6 +13,7 @@ from langchain_core.output_parsers import StrOutputParser
 from langchain_core.runnables import RunnablePassthrough
 import os
 os.environ["COHERE_API_KEY"] = '6ejEMsFRJ5Bt0HsekOZe8peS6V26rfJIWf0jQtIu'
+os.environ["GOOGLE_API_KEY"] = 'AIzaSyDFDQK2DePe9wPdDukwW1RQvtN5-IJLUK4'
 
 # Function to load and process the document
 def load_and_process_document(url):
